@@ -8,9 +8,10 @@ public class Player : MonoBehaviour
 
     float horizontal;
     float vertical;
-    float moveLimiter = 0.7f;
+    [SerializeField] float moveLimiter = 0.7f;
 
-    public float runSpeed = 20.0f;
+    //public float runSpeed = 1.0f;
+    [SerializeField] float runSpeed = 10f;
 
     void Start ()
     {
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     {
         // Gives a value between -1 and 1
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        vertical = Input.GetAxisRaw("Vertical"); // -1 is down  
     }
 
     void FixedUpdate()
@@ -34,5 +35,6 @@ public class Player : MonoBehaviour
         } 
 
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        Debug.Log(body.velocity);
     }
 }
