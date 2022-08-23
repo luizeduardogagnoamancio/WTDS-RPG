@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     float vertical;
     [SerializeField] float moveLimiter = 0.7f;
 
+
     //public float runSpeed = 1.0f;
     [SerializeField] float runSpeed = 10f;
 
@@ -35,6 +36,6 @@ public class Player : MonoBehaviour
         } 
 
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-        Debug.Log(body.velocity);
+        
     }
 }
