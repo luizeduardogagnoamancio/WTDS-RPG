@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
     public Sprite back;
     public Sprite right;
     public Sprite left;
-
+    
+    public Staff staff;
     //public float runSpeed = 1.0f;
     [SerializeField] float runSpeed = 10f;
 
@@ -48,12 +49,14 @@ public class Player : MonoBehaviour
 
         if (horizontal == -1 && vertical == 0)
         {
+            staff.FlipSprite();
             spriteRenderer.sprite = left;
         }
         
         else if (horizontal == 1 && vertical == 0)
         {
             spriteRenderer.sprite = right;
+            staff.Volta();
         }
         
         else if (horizontal == 0 && vertical == 1)

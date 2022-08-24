@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
     public bool canFire;
 
     private float timer;
-
+    
     public float timeBetweenFiring;
 
     void Start()
@@ -28,7 +28,9 @@ public class Shooting : MonoBehaviour
         Vector3 rotation = mousePos - transform.position;
 
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        
 
+        /*  */
         //transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
         if(!canFire)
