@@ -662,6 +662,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300004, guid: c98b9cd543d1a6d448e27babb81798a0, type: 3}
     - target: {fileID: 5575000439394629601, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575000439394629601, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
       propertyPath: staff
       value: 
       objectReference: {fileID: 1899447909}
@@ -677,6 +681,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 429133048}
+    - target: {fileID: 5575000439394629603, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5575000439394629614, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
       propertyPath: m_Name
       value: Player
