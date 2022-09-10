@@ -1,5 +1,5 @@
 # WTDS-RPG
-Wizard Top Down Shooter RPG
+Wizard Top Down Shooter RPG:
 A top down shooter with RPG mechanics made by a aspiring GameDev.
 
 Assets:
