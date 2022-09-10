@@ -1,5 +1,9 @@
 # WTDS-RPG
 Wizard Top Down Shooter RPG
+A top down shooter with RPG mechanics made by a aspiring GameDev.
+
+Assets:
+Brackeys 2D Mega Pack
 
 Trello Link:
 https://trello.com/b/C82nDvZe/wizardshooter
