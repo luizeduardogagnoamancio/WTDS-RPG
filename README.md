@@ -12,4 +12,6 @@ Google Docs About the Project:
 https://docs.google.com/document/d/1cVtN5vtFIzUForv-_vCPoZ-KRxos-buwg9qLlD9LxWQ/edit
 
 Prototype:
-https://drive.google.com/file/d/1_U6xP3HyrVB5aKcuJNvu-Qg817tEUUHk/view?usp=sharing
+https://drive.google.com/file/d/1ALZNsuvvInda6hsxaEXHO9e2rhS_C9_U/view?usp=sharing
+
+![](https://github.com/luizeduardogagnoamancio/Wizard-Shooter/blob/main/GIFS/shootingGif.gif)
