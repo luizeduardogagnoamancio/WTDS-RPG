@@ -22,8 +22,8 @@ public class MeleeEnemy : Enemy
             {
                 if (Time.time >= attackTime)
                 {
-                    StartCoroutine(Attack());
                     attackTime = Time.time + timeBetweenAttacks;
+                    StartCoroutine(Attack());
                 }
             }
            
