@@ -151,5 +151,5 @@ MonoBehaviour:
   speed: 4
   timeBetweenAttacks: 3
   damage: 1
-  stopDistance: 10
+  stopDistance: 6
   attackSpeed: 0.75
