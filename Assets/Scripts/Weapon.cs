@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform shotPoint;
     public float timeBetweenShots;
 
+
     private float shotTime;
     
     // Update is called once per frame
@@ -22,6 +23,8 @@ public class Weapon : MonoBehaviour
         {
             if (Time.time >= shotTime)
             {
+                //Animation
+                //
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 shotTime = Time.time + timeBetweenShots;
             }

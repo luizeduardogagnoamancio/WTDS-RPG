@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     public float health;
 
+    public Animator animator;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveAmount = moveInput.normalized * speed;
     }

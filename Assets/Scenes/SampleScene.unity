@@ -513,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7258526172834782265, guid: 626836ea530fe2b42ab5e4ff2c858bb7, type: 3}
       propertyPath: maxX
-      value: 5.15
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7258526172834782265, guid: 626836ea530fe2b42ab5e4ff2c858bb7, type: 3}
       propertyPath: maxY
@@ -751,6 +751,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5494779, y: 3.0192094}
   m_EdgeRadius: 0
+--- !u!95 &720863887
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267398988}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68fb3d4f6012cd248ba66c8c13da7910, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &732380442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7258526172834782266, guid: 626836ea530fe2b42ab5e4ff2c858bb7, type: 3}
@@ -940,25 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf969d67e9c42f46bd2d8873017d57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - enemies:
-    - {fileID: 7601708062085804867, guid: ced63a10f5b9a8744bdeb3db013e9d29, type: 3}
-    count: 2
-    timeBetweenSpawns: 2
-  spawnPoints:
-  - {fileID: 596829857}
-  - {fileID: 1325753665}
-  - {fileID: 1066323736}
-  - {fileID: 963372998}
-  - {fileID: 1261758946}
-  - {fileID: 851990129}
-  - {fileID: 339891252}
-  - {fileID: 25061993}
-  - {fileID: 1298566245}
-  - {fileID: 2123044072}
-  - {fileID: 626401268}
-  - {fileID: 734851852}
-  - {fileID: 64356620}
+  waves: []
+  spawnPoints: []
   timeBetweenWaves: 3
 --- !u!4 &1168210138
 Transform:
@@ -1451,13 +1454,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 45674082d64985f4d876079c95a9e1d5, type: 2}
+    - target: {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
       propertyPath: m_Animations.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
       propertyPath: m_Animations.Array.data[0]
       value: 
-      objectReference: {fileID: 7400000, guid: b4e9d135ec6d8ab46b985f01bb6c4340, type: 2}
+      objectReference: {fileID: 7400000, guid: 45674082d64985f4d876079c95a9e1d5, type: 2}
+    - target: {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: m_Animations.Array.data[1]
+      value: 
+      objectReference: {fileID: 7400000, guid: 69d7d548908a6a142ac0a6f2f3dccf63, type: 2}
+    - target: {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: m_Animations.Array.data[2]
+      value: 
+      objectReference: {fileID: 7400000, guid: 1a458f4f7eda3bb41ad64cf42f6866cd, type: 2}
+    - target: {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: m_Animations.Array.data[3]
+      value: 
+      objectReference: {fileID: 7400000, guid: a7afcecf5a5745547a6da3e3b868f831, type: 2}
+    - target: {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: m_Animations.Array.data[4]
+      value: 
+      objectReference: {fileID: 7400000, guid: a7afcecf5a5745547a6da3e3b868f831, type: 2}
     - target: {fileID: 5575000439394629600, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1539,6 +1562,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5575000439394629601, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 720863887}
+    - target: {fileID: 5575000439394629601, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 429133048}
@@ -1558,5 +1585,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1565088789155986900, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00121fb1850daa1459dfb33170c36b53, type: 3}
