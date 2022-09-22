@@ -147,9 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  maxHealth: 1
   player: {fileID: 0}
   speed: 4
   timeBetweenAttacks: 3
   damage: 1
+  healthBar: {fileID: 4856961747283906578, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
   stopDistance: 6
   attackSpeed: 0.75
