@@ -10,13 +10,18 @@ public class Player : MonoBehaviour
 
     private Vector2 moveAmount;
 
-    public float health;
+    public int health;
+
+    public int maxHealth;
 
     public Animator animator;
 
-    private void Start()
+    public HealthBarBehaviour healthBar;
+
+    public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        healthBar.SetHealth(health, maxHealth);
     }
 
     private void Update()
@@ -33,7 +38,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
-
+        healthBar.SetHealth(health, maxHealth);
         if (health <= 0)
         {
             Destroy(gameObject);
