@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth;
 
+    private GameObject playerAll;
+
     [HideInInspector]
     public Transform player;
 
@@ -19,10 +21,13 @@ public class Enemy : MonoBehaviour
 
     public HealthBarBehaviour healthBar;
 
+    public float expGive = 10;
+
 
     public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerAll = GameObject.FindGameObjectWithTag("Player");
         healthBar.SetHealth(health, maxHealth);
     }
     public void TakeDamage(int damageAmount)
@@ -32,7 +37,9 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            playerAll.GetComponent<Player>().GainExp(expGive);
             Destroy(gameObject);
+
         }
     }
 }
