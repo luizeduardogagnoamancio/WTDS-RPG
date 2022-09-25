@@ -1,27 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;  
 
 public class Player : MonoBehaviour
 {
+
+    public Slider healthSlider;
+
+    public Text healthText;
+
     public float speed = 10;
     
     private Rigidbody2D rb;
 
     private Vector2 moveAmount;
 
-    public int health;
+    public float health;
 
-    public int maxHealth;
+    public float maxHealth;
 
     public Animator animator;
-
-    public HealthBarBehaviour healthBar;
 
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        healthBar.SetHealth(health, maxHealth);
+        healthSlider.value = health;
+        SetHealthText();
     }
 
     private void Update()
@@ -37,11 +42,23 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(int damageAmount)
     {
+        //playerStats.DealDamage(damageAmount)
         health -= damageAmount;
-        healthBar.SetHealth(health, maxHealth);
+        SetHealthText();
         if (health <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    float CalculateHealthPercentage()
+    {
+        return health / maxHealth;
+    }
+
+    private void SetHealthText()
+    {
+        healthSlider.value = CalculateHealthPercentage();
+        healthText.text = Mathf.Ceil(health).ToString() + " / " + Mathf.Ceil(maxHealth).ToString();
     }
 }
