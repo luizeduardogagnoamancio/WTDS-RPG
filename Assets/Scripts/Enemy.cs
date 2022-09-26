@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     public HealthBarBehaviour healthBar;
 
-    public float expGive = 10;
+    public float expGive = 100;
 
 
     public virtual void Start()

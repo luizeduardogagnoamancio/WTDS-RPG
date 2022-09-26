@@ -154,6 +154,7 @@ MonoBehaviour:
   timeBetweenAttacks: 8
   damage: 10
   healthBar: {fileID: 4856961747283906578, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
+  expGive: 100
   minX: 0
   maxX: 0
   minY: 0
@@ -169,6 +170,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3092477146281383993}
     m_Modifications:
+    - target: {fileID: 4856961746102674890, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856961746102674890, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4856961747283906579, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -256,6 +265,14 @@ PrefabInstance:
     - target: {fileID: 4856961747283906581, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856961747297858308, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856961747297858309, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6dc206c755e5204f915d914aabe2b2a, type: 3}

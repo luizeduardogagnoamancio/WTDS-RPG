@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public Text expText;
 
+    public Text levelText;
+
     public float speed = 10;
     
     private Rigidbody2D rb;
@@ -30,6 +32,8 @@ public class Player : MonoBehaviour
 
     public float maxExp = 100;
 
+    public int level;
+
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,6 +41,7 @@ public class Player : MonoBehaviour
         expSlider.value = exp;
         SetHealthText();
         SetExpText();
+        SetLvlText();
     }
 
     private void Update()
@@ -49,6 +54,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
+        Debug.Log(level);
     }
     public void TakeDamage(int damageAmount)
     {
@@ -83,9 +89,29 @@ public class Player : MonoBehaviour
         expText.text = Mathf.Ceil(exp).ToString() + " / " + Mathf.Ceil(maxExp).ToString();
     }
 
+    private void SetLvlText()
+    {
+        levelText.text = "Lvl . " + level.ToString();
+    }
+
+
+
     public void GainExp(float amount)
     {
         exp += amount;
+        if (exp >= maxExp)
+        {
+            exp -= maxExp;
+            level += 1;
+            SetLvlText();
+            maxExp += maxExp - 50;
+        }
+        else
+        {
+            exp += amount;
+        }
+        
         SetExpText();
     }
+    
 }
