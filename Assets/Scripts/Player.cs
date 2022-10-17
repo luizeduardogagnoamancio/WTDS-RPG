@@ -98,7 +98,6 @@ public class Player : MonoBehaviour
 
     public void GainExp(float amount)
     {
-        exp += amount;
         if (exp >= maxExp)
         {
             exp -= maxExp;

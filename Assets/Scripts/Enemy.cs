@@ -19,8 +19,6 @@ public class Enemy : MonoBehaviour
 
     public int damage;
 
-    public HealthBarBehaviour healthBar;
-
     public float expGive = 100;
 
 
@@ -28,12 +26,10 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerAll = GameObject.FindGameObjectWithTag("Player");
-        healthBar.SetHealth(health, maxHealth);
     }
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
-        healthBar.SetHealth(health, maxHealth);
 
         if (health <= 0)
         {
